@@ -1,7 +1,7 @@
-##Be casreful with edit/update functions##
-class Employees < Activerecord::Base
-    Belongs_to: Department
-    attr_accessor :first_name, :last_name, :dept, :salary
+##solely for rolecall##
+class Departments < Activerecord::Base
+    Has_many: Employees
+    attr_accessor :first_name, :last_name, :dept
     attr_reader :first_name, :last_name
 
 Staff=()
