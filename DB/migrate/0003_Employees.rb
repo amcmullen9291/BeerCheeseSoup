@@ -1,4 +1,4 @@
-class EmployeesTable < Activerecord::migration
+class EmployeesTable < ActiveRecord::migration
     def change
         create_table :HumanResources do |t|
             t.string :first_name
