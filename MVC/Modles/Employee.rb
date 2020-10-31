@@ -1,5 +1,5 @@
 ##Be casreful with edit/update functions##
-class Employees
+class Employees < Activerecord::Base
     attr_accessor :first_name, :last_name, :dept, :salary
     attr_reader :first_name, :last_name
 

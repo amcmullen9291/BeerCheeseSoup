@@ -1,3 +1,3 @@
 ##complete with ALL CRUD actions##
-class HumanRersourses
+class HumanRersourses < Activerecord::Base
 end
