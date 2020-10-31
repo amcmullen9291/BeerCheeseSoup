@@ -12,3 +12,4 @@ gem 'require_all'
 gem 'sinatra'
 gem 'activerecord'
 gem 'rake'
+gem 'corneal'  ##remove before done

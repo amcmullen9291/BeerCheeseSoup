@@ -1,17 +1,11 @@
+ENV['SINATRA_ENV'] ||= "development"
 
 require 'bundler/setup'
-Bundler.require
-require 'sinatra'
-require_relative config
-require_all db
-require_all mvc
-require_all public
-
-set :database, 'sqlite3:db/employees.db'
+Bundler.require(:default, ENV['SINATRA_ENV'])
 
 ActiveRecord::Base.establish_connection(
-    :adapter => "sqlite3",
-    :database => "db/employees.db"
-  )
+  :adapter => "sqlite3",
+  :database => "db/employees.sqlite"
+)
 
-  Run EmployeeController
+require_all 'app'
