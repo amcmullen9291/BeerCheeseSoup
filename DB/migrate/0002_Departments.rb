@@ -1,4 +1,4 @@
-class DepartmentTable < Activerecord::migration[6.0]
+class DepartmentTable < Activerecord::migration
     def change
         create_table :HumanResources do |t|
             t.string :dept

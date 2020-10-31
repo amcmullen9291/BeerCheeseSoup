@@ -1,4 +1,4 @@
-class HrTable < Activerecord::migration[6.0]
+class HrTable < Activerecord::migration
     def change
         create_table :HumanResources do |t|
             t.string :first_name

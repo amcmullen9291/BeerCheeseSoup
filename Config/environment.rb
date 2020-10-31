@@ -2,10 +2,10 @@
 require 'bundler/setup'
 Bundler.require
 require 'sinatra'
-require_relative Config
-require_all Databases
-require_all MVC
-require_all Public
+require_relative config
+require_all db
+require_all mvc
+require_all public
 
 
 ActiveRecord::Base.establish_connection(
