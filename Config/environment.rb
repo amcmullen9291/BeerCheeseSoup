@@ -7,6 +7,7 @@ require_all db
 require_all mvc
 require_all public
 
+set :database, 'sqlite3:db/employees.db'
 
 ActiveRecord::Base.establish_connection(
     :adapter => "sqlite3",
