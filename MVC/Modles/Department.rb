@@ -1,5 +1,5 @@
 ##solely for rolecall##
-class Departments < Activerecord::base
+class Departments < Activerecord::Base
     attr_accessor :first_name, :last_name, :dept
     attr_reader :first_name, :last_name
 

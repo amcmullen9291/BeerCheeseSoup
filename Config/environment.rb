@@ -10,9 +10,4 @@ ActiveRecord::Base.establish_connection(
     :database => "db/employees.db"
   )
 
-  sql = <<- SQL
-  sqlite3 employees.db
-  SQL
-  ActiveRecord::Base.connection.execute(sql)
-
   Run EmployeeController
