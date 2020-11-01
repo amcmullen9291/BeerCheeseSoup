@@ -1,4 +1,6 @@
 require 'bundler'
+require 'require_all'
+require_all 'mvc'
 Bundler.require
 
 configure do
@@ -13,4 +15,3 @@ ActiveRecord::Base.establish_connection(
   :database => "db/employees.sqlite"
 )
 
-require_all 'mvc'
