@@ -7,13 +7,10 @@ class EmployeesController < Sinatra::Base
     post '/' do #for submitting w/e cards
     end
 
-    put '/' do  #use to reset entire w/e form
+    put '/:badge_id/' do  #use to reset entire w/e form
     end
 
-    patch '/' do #but only to channge current week hours##
-    end
-
-    delete '/' do
+    patch '/:badge_id/' do #but only to change current week hours##
     end
 
 end
