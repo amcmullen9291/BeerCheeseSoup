@@ -1,6 +1,7 @@
 EmployeesController < Sinatra::Base
 
-get '/'
+get '/' do
+    "first try"
 end
 
 post
