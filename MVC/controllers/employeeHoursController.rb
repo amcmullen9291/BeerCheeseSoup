@@ -1,6 +1,6 @@
 class employeesHoursController < employeesController
 
-    get '/' do
+    get '/:badge_id' do
     end
 
     post '' do
@@ -9,7 +9,7 @@ class employeesHoursController < employeesController
     put '' do
     end
 
-    patch '' do  #to channge salary and department info##
+    patch '' do  #to add hours to timecard
     end
 
     delete '' do

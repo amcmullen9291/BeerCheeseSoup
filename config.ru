@@ -1,4 +1,3 @@
 require_relative './config/environment'
 
-
-run EmployeesController
+run employeesController

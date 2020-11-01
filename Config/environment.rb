@@ -15,3 +15,7 @@ ActiveRecord::Base.establish_connection(
   :database => "db/employees.sqlite"
 )
 
+use employeesHoursController
+use eumanResourcesController
+run employeesController
+

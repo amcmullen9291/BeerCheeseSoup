@@ -4,16 +4,16 @@ class EmployeesController < Sinatra::Base
         "first try"
     end
 
-    post '' do
+    post '/' do #for submitting w/e cards
     end
 
-    put '' do
+    put '/' do  #use to reset entire w/e form
     end
 
-    patch '' do #but only to channge current week hours##
+    patch '/' do #but only to channge current week hours##
     end
 
-    delete '' do
+    delete '/' do
     end
 
 end
