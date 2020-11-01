@@ -10,7 +10,7 @@ end
 
 ActiveRecord::Base.establish_connection(
   :adapter => "sqlite3",
-  :database => "db/employees.sqlite"
+  :database => "db/employees.sqlite3"
 )
 
 require_all 'mvc'
