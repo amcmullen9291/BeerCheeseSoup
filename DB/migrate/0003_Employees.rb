@@ -1,21 +1,10 @@
-class EmployeesTable < ActiveRecord::migration
+class Employees < ActiveRecord::migration
     def change
         create_table :HumanResources do |t|
             t.string :first_name
             t.string :last_name
             t.integer :salary
-            t.string :dept
+            t.string :dept_id
         end
-
-    #sql = <<-SQL
-    #CREATE TABLE if not exists Employees(
-        #PRIMARY KEY int
-        #first_name text,
-        #last_name text,
-        #salary int,
-        #dept text,
-    #);
-    #SQL
-    #ActiveRecord::Base.connection.execute(sql)
     end
 end

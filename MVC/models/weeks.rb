@@ -1,4 +1,4 @@
-class Week
-belongs_to: employee
+class Week < ActiveRecord::Base
+belongs_to :employee
 
 end
