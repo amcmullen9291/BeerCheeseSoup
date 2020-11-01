@@ -1,17 +1,19 @@
-EmployeesController < Sinatra::Base
+class EmployeesController < Sinatra::Base
 
-get '/' do
-    "first try"
-end
+    get '/' do
+        "first try"
+    end
 
-post
-end
+    post '' do
+    end
 
-put
-end
+    put '' do
+    end
 
-patch #but only to channge current week hours##
-end
+    patch '' do #but only to channge current week hours##
+    end
 
-delete ''
+    delete '' do
+    end
+
 end

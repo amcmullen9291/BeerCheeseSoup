@@ -1,5 +1,5 @@
 ##complete with ALL CRUD actions##
-class HumanRersource < Activerecord::Base
+class HumanRersource < ActiveRecord::Base
 end
 
 

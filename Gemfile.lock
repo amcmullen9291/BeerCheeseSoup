@@ -55,8 +55,6 @@ GEM
     sinatra-activerecord (2.0.21)
       activerecord (>= 4.1)
       sinatra (>= 1.0)
-    sinatra-base (1.0)
-      rack (>= 1.0)
     sinatra-flash (0.3.0)
       sinatra (>= 1.0.0)
     sqlite3 (1.4.2)
@@ -80,7 +78,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  activerecord
+  activerecord (~> 6.0, >= 6.0.3.4)
   bcrypt
   corneal
   pry
@@ -89,7 +87,6 @@ DEPENDENCIES
   shotgun
   sinatra (~> 2.1)
   sinatra-activerecord (~> 2.0, >= 2.0.21)
-  sinatra-base
   sinatra-flash (~> 0.3.0)
   sqlite3
   thin

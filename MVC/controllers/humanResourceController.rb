@@ -1,16 +1,18 @@
 class HumanResourcesController < Sinatra::Base
 
-get '/'
-end
+    get '/' do
+    end
 
-post
-end
+    post '' do
+    end
 
-put
-end
+    put '' do
+    end
 
-patch #to channge salary and department info##
-end
+    patch '' do  #to channge salary and department info##
+    end
 
-delete ''
+    delete '' do
+    end
+
 end

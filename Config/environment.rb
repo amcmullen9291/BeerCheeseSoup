@@ -5,12 +5,12 @@ configure do
   set :public_folder, 'public'
   set :views, 'mvc/views'
   enable :sessions
-  set :session_secret, "secrets"
+  set :session_secret, "overdraftprotection"
 end
 
 ActiveRecord::Base.establish_connection(
   :adapter => "sqlite3",
-  :database => "db/employees.sqlite3"
+  :database => "db/employees.sqlite"
 )
 
 require_all 'mvc'
