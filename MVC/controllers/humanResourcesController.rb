@@ -1,4 +1,4 @@
-class HumanResourcesController < Sinatra::Base
+class HumanResourcesController < employeesController
 
     get '/' do
     end
