@@ -14,3 +14,4 @@ gem 'activerecord', '~> 6.0', '>= 6.0.3.4'
 gem 'rake', '~> 13.0', '>= 13.0.1'
 gem 'corneal'  ##remove before done
 gem 'bcrypt'
+gem 'bootstrap', '~> 4.0'
