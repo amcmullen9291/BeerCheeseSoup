@@ -40,7 +40,11 @@
   } /*the "welcome to beer cheese" banner signup page*/
 
 .signup{
-  background-color: gray;
+  background-color: rgb(250, 225, 143);
+  border-style: groove;
+  border-width: 1em;
+  border-color: black rgb(92, 89, 89);
+
 }
 
 .in-form{
