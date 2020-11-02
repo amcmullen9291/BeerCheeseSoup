@@ -1,5 +1,6 @@
 body {
-    background:('public\images\logout_image.jpg') no-repeat center center fixed;
+    background-color:#FFDAB9;
+    background-image: ('public\images\logout_image.jpg') no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;

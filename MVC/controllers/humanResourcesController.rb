@@ -1,10 +1,13 @@
 class HumanResourcesController < employeesController
 
-    get '/' do
+    get '/hr' do  #sign for "HR Portal"
+
     end
 
-    get '/search' do #use script tag in form to define last_name symbol
-        Employees.Staff.find_by employee.last_name
+    get '/hr' do
+        session.clear
+        flash[:notice] = "H.R. Portal"
+        Employees.Staff.find_by last_name: params[:last_name]
         sessions[:first_name] = @first_name
         sessions[:badge_id] = @badge_id
         sessions[:start_date] = @start_date
@@ -12,7 +15,6 @@ class HumanResourcesController < employeesController
         @dept = sessions[:dept_id]
         @emp = Department.find_by(:id == @dept)
         @name = @emp.name
-
         erb :hr_profile
     end
 
@@ -36,7 +38,7 @@ class HumanResourcesController < employeesController
     post '/hr/:badge_id/none2h67' do #to show deleted profiles MESSAGE -- could use flash?
     end
 
-    post '/hr/:badge_id/new' do #to show new profile
+    post '/hr/new' do #to show new profile
     end
 
 

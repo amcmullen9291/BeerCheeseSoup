@@ -1,7 +1,7 @@
 class EmployeesController < Sinatra::Base
 
     get '/' do
-        erb :login
+        erb :home
     end
 
     post '/:badge_id/paidweeks' do #for submitting w/e cards
