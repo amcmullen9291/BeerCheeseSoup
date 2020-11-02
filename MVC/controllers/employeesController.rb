@@ -34,4 +34,12 @@ class EmployeesController < Sinatra::Base
         erb :hours_log
     end
 
+    get '/:badge_id' do #shows employee profile
+        #add instance variables (@var)
+        erb :profile
+    end
+
+    get '/registrations' do
+        erb :signup
+    end
 end

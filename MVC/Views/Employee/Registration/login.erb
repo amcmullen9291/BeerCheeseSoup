@@ -1,1 +1,26 @@
-#have to button to sign up going back to controller
+<html>
+    <head>
+        <link rel="stylesheet" href="ccs\welcome.css">
+    </head>
+    <body>
+        <div class="card-body">
+            <h5 class="card-title text-center">Sign In</h5>
+            <form class="in_form">
+            <div><%@email=
+                <input type="email" id="inputEmail" class="form-control" placeholder="Email address">
+                <label for="inputEmail">Email address</label>%>
+            </div>
+            <div class= "card-body"><%@password=
+                <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+                <label for="inputPassword">Password</label>%>
+            </div>
+            <form action="/:badge_id" method= "get">
+                <input type= "submit" name= "submit" placeholder= "Log In">
+            </form>
+            <form action="/registration" method= "get">
+                <input type= "submit" name= "submit" placeholder= "Register Now">
+            </form>
+        </form>
+    </div>
+</html>
+
