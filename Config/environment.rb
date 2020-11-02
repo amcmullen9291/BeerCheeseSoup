@@ -1,5 +1,7 @@
 require 'bundler'
+require 'sinatra/flash'
 require 'require_all'
+
 require_all 'mvc'
 Bundler.require
 

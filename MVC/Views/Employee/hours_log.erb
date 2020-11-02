@@ -1,11 +1,11 @@
 #what about 3rd shift?
-
+<!doctype html>
 <html>
   <head>
     <title> Beer Cheese Soup Inc. </title>
   </head>
   <body>
-    <main>
+    <main class = "background">
       <form action="/:badge_id/submit" method="get">
       <img src= "public\images/logo.jpg">
       <div class= "timecard">
@@ -20,10 +20,11 @@
         <th></th>
         <th>Total Hours</th>
         </tr>
+        <%= yield %>
         <tr>
         <td>Monday</td>
         <td>
-         <select name="Time in" id="In"></th>
+         <select name="Time in" id="In">
           <option value="0">12am</option>
           <option value="1">1am</option>
           <option value="2">2am</option>
@@ -48,10 +49,11 @@
           <option value="21">9pm</option>
           <option value="22">10pm</option>
           <option value="23">11pm</option>
+          <%@in1= #{'value'}%>
         </select>
         </td>
         <td>
-          <th><select name="Time out" id="Out"> </th>
+          <select name="Time out" id="Out">
           <option value="0">12am</option>
           <option value="1">1am</option>
           <option value="2">2am</option>
@@ -76,161 +78,16 @@
           <option value="21">9pm</option>
           <option value="22">10pm</option>
           <option value="23">11pm</option>
+          <%@out1= #{'value'}%>
         </select>
         </td>
-        <td> <%=@hours1%> #assign the variable
+        <td><%=@hours1%>
         </td>
-      </tr>
-        <td>Tuesday</td>
-        <td>
-          <th><select name="Time in" id="In"></th>
-          <option value="0">12am</option>
-          <option value="1">1am</option>
-          <option value="2">2am</option>
-          <option value="3">3am</option>
-          <option value="4">4am</option>
-          <option value="5">5am</option>
-          <option value="6">6am</option>
-          <option value="7">7am</option>
-          <option value="8">8am</option>
-          <option value="9">9am</option>
-          <option value="10">10am</option>
-          <option value="11">11am</option>
-          <option value="12">12pm</option>
-          <option value="13">1pm</option>
-          <option value="14">2pm</option>
-          <option value="15">3pm</option>
-          <option value="16">4pm</option>
-          <option value="17">5pm</option>
-          <option value="18">6pm</option>
-          <option value="19">7pm</option>
-          <option value="20">8pm</option>
-          <option value="21">9pm</option>
-          <option value="22">10pm</option>
-          <option value="23">11pm</option>
-        </select>
-        </tr>
-        <tr>
-            <td>
-          <th><select name="Time out" id="Out"></th>
-          <option value="0">12am</option>
-          <option value="1">1am</option>
-          <option value="2">2am</option>
-          <option value="3">3am</option>
-          <option value="4">4am</option>
-          <option value="5">5am</option>
-          <option value="6">6am</option>
-          <option value="7">7am</option>
-          <option value="8">8am</option>
-          <option value="9">9am</option>
-          <option value="10">10am</option>
-          <option value="11">11am</option>
-          <option value="12">12pm</option>
-          <option value="13">1pm</option>
-          <option value="14">2pm</option>
-          <option value="15">3pm</option>
-          <option value="16">4pm</option>
-          <option value="17">5pm</option>
-          <option value="18">6pm</option>
-          <option value="19">7pm</option>
-          <option value="20">8pm</option>
-          <option value="21">9pm</option>
-          <option value="22">10pm</option>
-          <option value="23">11pm</option>
-        </select>
-        </td>
-      </tr>
-        <td>Wednesday</td>
-        <td>
-          <th><select name="Time in" id="In"></th>
-          <option value="0">12am</option>
-          <option value="1">1am</option>
-          <option value="2">2am</option>
-          <option value="3">3am</option>
-          <option value="4">4am</option>
-          <option value="5">5am</option>
-          <option value="6">6am</option>
-          <option value="7">7am</option>
-          <option value="8">8am</option>
-          <option value="9">9am</option>
-          <option value="10">10am</option>
-          <option value="11">11am</option>
-          <option value="12">12pm</option>
-          <option value="13">1pm</option>
-          <option value="14">2pm</option>
-          <option value="15">3pm</option>
-          <option value="16">4pm</option>
-          <option value="17">5pm</option>
-          <option value="18">6pm</option>
-          <option value="19">7pm</option>
-          <option value="20">8pm</option>
-          <option value="21">9pm</option>
-          <option value="22">10pm</option>
-          <option value="23">11pm</option>
-        </select>
-        </tr>
-        <tr>
-            <td>
-          <th><select name="Time out" id="Out"></th>
-          <option value="0">12am</option>
-          <option value="1">1am</option>
-          <option value="2">2am</option>
-          <option value="3">3am</option>
-          <option value="4">4am</option>
-          <option value="5">5am</option>
-          <option value="6">6am</option>
-          <option value="7">7am</option>
-          <option value="8">8am</option>
-          <option value="9">9am</option>
-          <option value="10">10am</option>
-          <option value="11">11am</option>
-          <option value="12">12pm</option>
-          <option value="13">1pm</option>
-          <option value="14">2pm</option>
-          <option value="15">3pm</option>
-          <option value="16">4pm</option>
-          <option value="17">5pm</option>
-          <option value="18">6pm</option>
-          <option value="19">7pm</option>
-          <option value="20">8pm</option>
-          <option value="21">9pm</option>
-          <option value="22">10pm</option>
-          <option value="23">11pm</option>
-        </select>
-        </td>
-      </tr>
-        <td>Thursday</td>
-        <td>
-          <th><select name="Time in" id="In"></th>
-          <option value="0">12am</option>
-          <option value="1">1am</option>
-          <option value="2">2am</option>
-          <option value="3">3am</option>
-          <option value="4">4am</option>
-          <option value="5">5am</option>
-          <option value="6">6am</option>
-          <option value="7">7am</option>
-          <option value="8">8am</option>
-          <option value="9">9am</option>
-          <option value="10">10am</option>
-          <option value="11">11am</option>
-          <option value="12">12pm</option>
-          <option value="13">1pm</option>
-          <option value="14">2pm</option>
-          <option value="15">3pm</option>
-          <option value="16">4pm</option>
-          <option value="17">5pm</option>
-          <option value="18">6pm</option>
-          <option value="19">7pm</option>
-          <option value="20">8pm</option>
-          <option value="21">9pm</option>
-          <option value="22">10pm</option>
-          <option value="23">11pm</option>
-        </select>
       </tr>
       <tr>
+        <td>Tuesday</td>
         <td>
-          <th><select name="Time out" id="Out"></th>
+          <select name="Time in" id="In">
           <option value="0">12am</option>
           <option value="1">1am</option>
           <option value="2">2am</option>
@@ -255,12 +112,169 @@
           <option value="21">9pm</option>
           <option value="22">10pm</option>
           <option value="23">11pm</option>
+          <% @in2= #{'value'}%>
         </select>
         </td>
+        <td>
+          <select name="Time out" id="Out">
+          <option value="0">12am</option>
+          <option value="1">1am</option>
+          <option value="2">2am</option>
+          <option value="3">3am</option>
+          <option value="4">4am</option>
+          <option value="5">5am</option>
+          <option value="6">6am</option>
+          <option value="7">7am</option>
+          <option value="8">8am</option>
+          <option value="9">9am</option>
+          <option value="10">10am</option>
+          <option value="11">11am</option>
+          <option value="12">12pm</option>
+          <option value="13">1pm</option>
+          <option value="14">2pm</option>
+          <option value="15">3pm</option>
+          <option value="16">4pm</option>
+          <option value="17">5pm</option>
+          <option value="18">6pm</option>
+          <option value="19">7pm</option>
+          <option value="20">8pm</option>
+          <option value="21">9pm</option>
+          <option value="22">10pm</option>
+          <option value="23">11pm</option>
+          <%@out2=#{'value'}%>
+        </select>
+        </td>
+        <td><%=@hours2%>
+        </td>
       </tr>
+      <tr>
+        <td>Wednesday</td>
+        <td>
+          <select name="Time in" id="In">
+          <option value="0">12am</option>
+          <option value="1">1am</option>
+          <option value="2">2am</option>
+          <option value="3">3am</option>
+          <option value="4">4am</option>
+          <option value="5">5am</option>
+          <option value="6">6am</option>
+          <option value="7">7am</option>
+          <option value="8">8am</option>
+          <option value="9">9am</option>
+          <option value="10">10am</option>
+          <option value="11">11am</option>
+          <option value="12">12pm</option>
+          <option value="13">1pm</option>
+          <option value="14">2pm</option>
+          <option value="15">3pm</option>
+          <option value="16">4pm</option>
+          <option value="17">5pm</option>
+          <option value="18">6pm</option>
+          <option value="19">7pm</option>
+          <option value="20">8pm</option>
+          <option value="21">9pm</option>
+          <option value="22">10pm</option>
+          <option value="23">11pm</option>
+          <%@in3= #{'value'}%>
+          </select>
+        </td>
+            <td>
+          <select name="Time out" id="Out">
+          <option value="0">12am</option>
+          <option value="1">1am</option>
+          <option value="2">2am</option>
+          <option value="3">3am</option>
+          <option value="4">4am</option>
+          <option value="5">5am</option>
+          <option value="6">6am</option>
+          <option value="7">7am</option>
+          <option value="8">8am</option>
+          <option value="9">9am</option>
+          <option value="10">10am</option>
+          <option value="11">11am</option>
+          <option value="12">12pm</option>
+          <option value="13">1pm</option>
+          <option value="14">2pm</option>
+          <option value="15">3pm</option>
+          <option value="16">4pm</option>
+          <option value="17">5pm</option>
+          <option value="18">6pm</option>
+          <option value="19">7pm</option>
+          <option value="20">8pm</option>
+          <option value="21">9pm</option>
+          <option value="22">10pm</option>
+          <option value="23">11pm</option>
+          <%@out3= #{'value'}%>
+        </select>
+        </td>
+        <td> <%=@hours3%> </td>
+      </tr>
+      <tr>
+        <td>Thursday</td>
+        <td>
+          <select name="Time in" id="In">
+          <option value="0">12am</option>
+          <option value="1">1am</option>
+          <option value="2">2am</option>
+          <option value="3">3am</option>
+          <option value="4">4am</option>
+          <option value="5">5am</option>
+          <option value="6">6am</option>
+          <option value="7">7am</option>
+          <option value="8">8am</option>
+          <option value="9">9am</option>
+          <option value="10">10am</option>
+          <option value="11">11am</option>
+          <option value="12">12pm</option>
+          <option value="13">1pm</option>
+          <option value="14">2pm</option>
+          <option value="15">3pm</option>
+          <option value="16">4pm</option>
+          <option value="17">5pm</option>
+          <option value="18">6pm</option>
+          <option value="19">7pm</option>
+          <option value="20">8pm</option>
+          <option value="21">9pm</option>
+          <option value="22">10pm</option>
+          <option value="23">11pm</option>
+          <%@in4= #{'value'}%>
+        </select>
+        </td>
+        <td>
+          <select name="Time out" id="Out">
+          <option value="0">12am</option>
+          <option value="1">1am</option>
+          <option value="2">2am</option>
+          <option value="3">3am</option>
+          <option value="4">4am</option>
+          <option value="5">5am</option>
+          <option value="6">6am</option>
+          <option value="7">7am</option>
+          <option value="8">8am</option>
+          <option value="9">9am</option>
+          <option value="10">10am</option>
+          <option value="11">11am</option>
+          <option value="12">12pm</option>
+          <option value="13">1pm</option>
+          <option value="14">2pm</option>
+          <option value="15">3pm</option>
+          <option value="16">4pm</option>
+          <option value="17">5pm</option>
+          <option value="18">6pm</option>
+          <option value="19">7pm</option>
+          <option value="20">8pm</option>
+          <option value="21">9pm</option>
+          <option value="22">10pm</option>
+          <option value="23">11pm</option>
+          <% @out4= #{'value'}%>
+        </select>
+        </td>
+        <td> <%=@hours4%></td>
+      </tr>
+      <tr>
         <td>Friday</td>
         <td>
-          <th><select name="Time in" id="In"></th>
+          <select name="Time in" id="In">
           <option value="0">12am</option>
           <option value="1">1am</option>
           <option value="2">2am</option>
@@ -285,41 +299,44 @@
           <option value="21">9pm</option>
           <option value="22">10pm</option>
           <option value="23">11pm</option>
-        </select>
-        </tr>
-        <tr>
-            <td>
-          <th><select name="Time out" id="Out"></th>
-          <option value="0">12am</option>
-          <option value="1">1am</option>
-          <option value="2">2am</option>
-          <option value="3">3am</option>
-          <option value="4">4am</option>
-          <option value="5">5am</option>
-          <option value="6">6am</option>
-          <option value="7">7am</option>
-          <option value="8">8am</option>
-          <option value="9">9am</option>
-          <option value="10">10am</option>
-          <option value="11">11am</option>
-          <option value="12">12pm</option>
-          <option value="13">1pm</option>
-          <option value="14">2pm</option>
-          <option value="15">3pm</option>
-          <option value="16">4pm</option>
-          <option value="17">5pm</option>
-          <option value="18">6pm</option>
-          <option value="19">7pm</option>
-          <option value="20">8pm</option>
-          <option value="21">9pm</option>
-          <option value="22">10pm</option>
-          <option value="23">11pm</option>
+          <%@in5= #{'value'}%>
         </select>
         </td>
+          <td>
+          <select name="Time out" id="Out">
+          <option value="0">12am</option>
+          <option value="1">1am</option>
+          <option value="2">2am</option>
+          <option value="3">3am</option>
+          <option value="4">4am</option>
+          <option value="5">5am</option>
+          <option value="6">6am</option>
+          <option value="7">7am</option>
+          <option value="8">8am</option>
+          <option value="9">9am</option>
+          <option value="10">10am</option>
+          <option value="11">11am</option>
+          <option value="12">12pm</option>
+          <option value="13">1pm</option>
+          <option value="14">2pm</option>
+          <option value="15">3pm</option>
+          <option value="16">4pm</option>
+          <option value="17">5pm</option>
+          <option value="18">6pm</option>
+          <option value="19">7pm</option>
+          <option value="20">8pm</option>
+          <option value="21">9pm</option>
+          <option value="22">10pm</option>
+          <option value="23">11pm</option>
+          <%@out5= #{'value'}%>
+        </select>
+        </td>
+        <td><%=@hour5%></td>
       </tr>
+      <tr>
         <td>Saturday</td>
         <td>
-          <th><select name="Time in" id="In"></th>
+          <select name="Time in" id="In">
           <option value="0">12am</option>
           <option value="1">1am</option>
           <option value="2">2am</option>
@@ -344,41 +361,43 @@
           <option value="21">9pm</option>
           <option value="22">10pm</option>
           <option value="23">11pm</option>
-        </select>
-        </tr>
-        <tr>
-            <td>
-          <th><select name="Time out" id="Out"></th>
-          <option value="0">12am</option>
-          <option value="1">1am</option>
-          <option value="2">2am</option>
-          <option value="3">3am</option>
-          <option value="4">4am</option>
-          <option value="5">5am</option>
-          <option value="6">6am</option>
-          <option value="7">7am</option>
-          <option value="8">8am</option>
-          <option value="9">9am</option>
-          <option value="10">10am</option>
-          <option value="11">11am</option>
-          <option value="12">12pm</option>
-          <option value="13">1pm</option>
-          <option value="14">2pm</option>
-          <option value="15">3pm</option>
-          <option value="16">4pm</option>
-          <option value="17">5pm</option>
-          <option value="18">6pm</option>
-          <option value="19">7pm</option>
-          <option value="20">8pm</option>
-          <option value="21">9pm</option>
-          <option value="22">10pm</option>
-          <option value="23">11pm</option>
+          <%@in6= #{'value'}%>
         </select>
         </td>
+          <td>
+          <select name="Time out" id="Out">
+          <option value="0">12am</option>
+          <option value="1">1am</option>
+          <option value="2">2am</option>
+          <option value="3">3am</option>
+          <option value="4">4am</option>
+          <option value="5">5am</option>
+          <option value="6">6am</option>
+          <option value="7">7am</option>
+          <option value="8">8am</option>
+          <option value="9">9am</option>
+          <option value="10">10am</option>
+          <option value="11">11am</option>
+          <option value="12">12pm</option>
+          <option value="13">1pm</option>
+          <option value="14">2pm</option>
+          <option value="15">3pm</option>
+          <option value="16">4pm</option>
+          <option value="17">5pm</option>
+          <option value="18">6pm</option>
+          <option value="19">7pm</option>
+          <option value="20">8pm</option>
+          <option value="21">9pm</option>
+          <option value="22">10pm</option>
+          <option value="23">11pm</option>
+          <%@out6= #{'value'}%>
+        </select>
+        </td>
+        <td> <%=@hours6%></td>
       </tr>
         <td>Sunday</td>
         <td>
-          <th><select name="Time in" id="In"></th>
+          <select name="Time in" id="In">
           <option value="0">12am</option>
           <option value="1">1am</option>
           <option value="2">2am</option>
@@ -403,11 +422,11 @@
           <option value="21">9pm</option>
           <option value="22">10pm</option>
           <option value="23">11pm</option>
+          <%@in7= #{'value'}%>
         </select>
-        </tr>
-        <tr>
-            <td>
-          <th><select name="Time out" id="Out"></th>
+          </td>
+          <td>
+          <select name="Time out" id="Out">
           <option value="0">12am</option>
           <option value="1">1am</option>
           <option value="2">2am</option>
@@ -432,14 +451,16 @@
           <option value="21">9pm</option>
           <option value="22">10pm</option>
           <option value="23">11pm</option>
+          <%@out7= #{'value'}%>
         </select>
         </td>
+        <td> <%=@hours7%></td>
       </tr>
     </table>
     <aside>
       <input type="reset" value="Reset Timecard">
       <form action="/:badge_id/save" method="patch">
-          <button>Save</button>
+          <button>Save/Update</button>
       </form>
           <input type="submit" value="Submit">
     </aside>
@@ -448,6 +469,9 @@
         <aside>
             <h5 class= "reminder"> Weeks run Sunday - Saturday. Please submit your time card for the entire week at one time. Thank you. </h5>
         </aside>
+    </div>
+    <div class= "hour_count">
+    <h3>Total Hours: <%=@weekly%></h3>
     </div>
   </form>
 </html>

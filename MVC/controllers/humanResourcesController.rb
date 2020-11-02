@@ -12,7 +12,12 @@ class HumanResourcesController < employeesController
     patch '/hr/:badge_id/modify' do  #to channge salary and department info##
     end
 
-    delete '/hr/:badge_id' do
+    delete '/:badge_id/timecard/delete' do
+        @Staff.map |badge_id| do
+        record = Employee.Staff.find_by :badge_id
+        record.destroy
+        end
+        flash[:notice] = "Record destroyed."
     end
 
     post '/hr/:badge_id/none2h67' do #to show deleted profiles MESSAGE -- could use flash?

@@ -11,13 +11,7 @@ class EmployeesController < Sinatra::Base
         erb :paidweeks
     end
 
-    put '/:badge_id/' do  #use to reset entire w/e form
-        @badge_id = Staff.select do |employee|
-            employee.badge_id == params[:badge_id]
-        end
-    end
-
-    patch '/:badge_id/timecard/reset' do
+    patch '/:badge_id/timecard/reset' do #use to reset entire w/e form
         @badge_id = Staff.select do |employee|
             employee.badge_id == params[:badge_id]
         end
@@ -29,25 +23,15 @@ class EmployeesController < Sinatra::Base
         @badge_id = Staff.select do |employee|
             employee.badge_id == params[:badge_id]
         end
-        @hours1=()
-        @hours2=()
-        @hours3=()
-        @hours4=()
-        @hours5=()
-        @hours6=()
-        @hours7=()
-        <%
-        @hours1 =
+        @hours1=(@out1-@in1)
+        @hours2=(@out2-@in2)
+        @hours3=(@out3-@in3)
+        @hours4=(@out4-@in4)
+        @hours5=(@out5-@in5)
+        @hours6=(@out6-@in6)
+        @hours7=(@out7-@in7)
+        @weekly = (@hours1+@hours2+@hours3+@hours4+@hours5+@hours6+@hours7)
         erb :hours_log
-    end
-
-    delete '/:badge_id/timecard/reset' do
-        @badge_id = Staff.select do |employee|
-            employee.badge_id == params[:badge_id]
-        end do
-        erb :hours_log
-    end
-
     end
 
 end
