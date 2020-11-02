@@ -11,4 +11,6 @@ class Employee < ActiveRecord::Base
         employee = Employee.new
         @@Staff << employee
     end
+
+
 end

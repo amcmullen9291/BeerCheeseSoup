@@ -23,39 +23,7 @@
         <tr>
         <td>Monday</td>
         <td>
-          <th>
-          <% hours1 = <select name="Time in" id="In"></th>
-          <option value="0">12am</option>
-          <option value="1">1am</option>
-          <option value="2">2am</option>
-          <option value="3">3am</option>
-          <option value="4">4am</option>
-          <option value="5">5am</option>
-          <option value="6">6am</option>
-          <option value="7">7am</option>
-          <option value="8">8am</option>
-          <option value="9">9am</option>
-          <option value="10">10am</option>
-          <option value="11">11am</option>
-          <option value="12">12pm</option>
-          <option value="13">1pm</option>
-          <option value="14">2pm</option>
-          <option value="15">3pm</option>
-          <option value="16">4pm</option>
-          <option value="17">5pm</option>
-          <option value="18">6pm</option>
-          <option value="19">7pm</option>
-          <option value="20">8pm</option>
-          <option value="21">9pm</option>
-          <option value="22">10pm</option>
-          <option value="23">11pm</option>
-        </select>
-        %>%
-      <tr><%= {#'hours1'} %>
-        </tr>
-        <tr>
-            <td>
-          <th><select name="Time out" id="Out"></th>
+         <select name="Time in" id="In"></th>
           <option value="0">12am</option>
           <option value="1">1am</option>
           <option value="2">2am</option>
@@ -82,7 +50,35 @@
           <option value="23">11pm</option>
         </select>
         </td>
-        <td> <%=@hours1%>
+        <td>
+          <th><select name="Time out" id="Out"> </th>
+          <option value="0">12am</option>
+          <option value="1">1am</option>
+          <option value="2">2am</option>
+          <option value="3">3am</option>
+          <option value="4">4am</option>
+          <option value="5">5am</option>
+          <option value="6">6am</option>
+          <option value="7">7am</option>
+          <option value="8">8am</option>
+          <option value="9">9am</option>
+          <option value="10">10am</option>
+          <option value="11">11am</option>
+          <option value="12">12pm</option>
+          <option value="13">1pm</option>
+          <option value="14">2pm</option>
+          <option value="15">3pm</option>
+          <option value="16">4pm</option>
+          <option value="17">5pm</option>
+          <option value="18">6pm</option>
+          <option value="19">7pm</option>
+          <option value="20">8pm</option>
+          <option value="21">9pm</option>
+          <option value="22">10pm</option>
+          <option value="23">11pm</option>
+        </select>
+        </td>
+        <td> <%=@hours1%> #assign the variable
         </td>
       </tr>
         <td>Tuesday</td>
@@ -441,7 +437,8 @@
       </tr>
     </table>
     <aside>
-      <form action="/:badge_id/save" method="get">
+      <input type="reset" value="Reset Timecard">
+      <form action="/:badge_id/save" method="patch">
           <button>Save</button>
       </form>
           <input type="submit" value="Submit">

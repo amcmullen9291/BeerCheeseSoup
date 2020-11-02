@@ -17,18 +17,37 @@ class EmployeesController < Sinatra::Base
         end
     end
 
-    patch '/:badge_id/save' do #but only to change current        week hours##
+    patch '/:badge_id/timecard/reset' do
         @badge_id = Staff.select do |employee|
             employee.badge_id == params[:badge_id]
         end
+
+        erb :hours_log
     end
 
     get '/:badge_id/timecard' do
         @badge_id = Staff.select do |employee|
             employee.badge_id == params[:badge_id]
         end
+        @hours1=()
+        @hours2=()
+        @hours3=()
+        @hours4=()
+        @hours5=()
+        @hours6=()
+        @hours7=()
         <%
         @hours1 =
         erb :hours_log
     end
+
+    delete '/:badge_id/timecard/reset' do
+        @badge_id = Staff.select do |employee|
+            employee.badge_id == params[:badge_id]
+        end do
+        erb :hours_log
+    end
+
+    end
+
 end
