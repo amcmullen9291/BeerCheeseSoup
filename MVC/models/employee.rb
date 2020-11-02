@@ -5,6 +5,10 @@ class Employee < ActiveRecord::Base
     has_many :weeks
     has_secure_password
 
-Staff=()
+    @@Staff=[]
 
+    def self.new (badge_id, first_name, last_name)
+        employee = Employee.new
+        @@Staff << employee
+    end
 end
