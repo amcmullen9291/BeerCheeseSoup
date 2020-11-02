@@ -42,4 +42,5 @@ class EmployeesController < Sinatra::Base
     get '/registrations' do
         erb :signup
     end
+
 end
