@@ -10,3 +10,5 @@ class HrTable < ActiveRecord::migration
         end
     end
 end
+
+#remember sign up has an address field also

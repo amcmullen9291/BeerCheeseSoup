@@ -1,12 +1,46 @@
-<html>
+<html> #see if you can use the radio buttons' 'value' to correspond to a departmentTable's name col.
     <head>
         <link rel="stylesheet" href="welcome.css">
     </head>
     <body id= registrations>
         <h2 class= "intro1"> Welcome to </h2>
         <h1 class= "intro2"> Beer Cheese Soup!</h1>
-        <form class= "signup" action = '/registrations' method = 'get'>
-
-        </form>
+        <div>
+            <form class= "signup" action = '/registrations' method = 'get'>
+                <h4>Create a profile to get started</h4>
+                <div><nobr><label><b>Name:</b><input type= "text" name=fnmae placeholder= "first"><spacer><input type= "text" name = "lname" placeholder= "last"></nobr></label></div>
+                <label><b>Address:</b><input type= "text" name="address" placeholder= "street address">
+                <input type= "text" name= "address2" placeholder= "line 2"></label>
+                <input type= "text" name= "address3" placeholder= "city, State, Zip"></label>
+                <br>
+                <p class= "float-container">
+                    <div id="float-child">
+                    <label><b>Email:</b><input type= "email" name="email" placeholder= "enter email"></div>
+                    <div id="float-child">
+                    <label><b>Telephone:</b><input type= "tel" name="telephone" placeholder= "         "></div>
+                </p>
+                <section>
+                    <aside class= "flex-container">
+                        <div class= "flex-child">
+                            <p>Select your shift:</p><br>
+                            <input type="radio" id="first" name="1st" value="1"><nobr><label for="first">First</label>
+                            <input type="radio" id="second" name="2nd" value="2"><nobr><label for="second">Second</label>
+                            <input type="radio" id="third" name="3rd" value="3"><nobr><label for="third">Third</label>
+                        </div>
+                        <div class= "flex-child">
+                            <p> Department:</p>
+                            <input type="radio" id="work1" name="production" value="11"><nobr><label for="production">production</label>
+                            <input type="radio" id="work2" name="maintenance" value="12"><nobr><label for="maintenance">maintenance</label>
+                            <input type="radio" id="work3" name="quality" value="13"><nobr><label for="quality">quality</label>
+                            <input type="radio" id="work4" name="shipping" value="12"><nobr><label for="shipping">shipping</label>
+                        <div>
+                    </aside>
+                </section>
+                <label class= "workStatus">Status:<input type= "color" name= "active" color= "#21AF43">
+            </form>
+        </div>
     </body>
+    <footer class="normalFoot">
+        <p>©2020 BeerCheeseSoup Inc.</p>
+    </footer>
 </html>
