@@ -18,6 +18,6 @@ ActiveRecord::Base.establish_connection(
 )
 
 use employeesHoursController
-use eumanResourcesController
+use humanResourcesController
 run employeesController
 
