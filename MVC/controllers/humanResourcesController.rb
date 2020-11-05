@@ -1,30 +1,18 @@
 class HumanResourcesController < employeesController
 
-    get '/hr' do  #sign for "HR Portal"
 
-    end
-
-    get '/hr' do
+    get '/hr' do #hr's employee profiles
         session.clear
         flash[:notice] = "H.R. Portal"
         Employees.Staff.find_by last_name: params[:last_name]
-        sessions[:first_name] = @first_name
-        sessions[:badge_id] = @badge_id
-        sessions[:start_date] = @start_date
-        sessions[:last_name] = @last_name
-        @dept = sessions[:dept_id]
-        @emp = Department.find_by(:id == @dept)
-        @name = @emp.name
+        params[:first_name] = @first_name
+        params[:badge_id] = @badge_id
+        params[:start_date] = @start_date
+        params[:last_name] = @last_name
+        area = params[:dept_id]
+        @dept = Department.Staff.find_by(:id == @dept)
+        @name = department.name
         erb :hr_profile
-    end
-
-    post '/hr/:badge_id' do #to show employee profiles
-    end
-
-    post '/hr/:badge_id/change ' do #to show amended profiles
-    end
-
-    patch '/hr/:badge_id/timecard/modify' do  #to channge salary and department info. add 'edit' button
     end
 
     delete '/:badge_id/timecard/delete' do
@@ -33,9 +21,6 @@ class HumanResourcesController < employeesController
         record.destroy
         end
         flash[:notice] = "Record destroyed."
-    end
-
-    post '/hr/:badge_id/none2h67' do #to show deleted profiles MESSAGE -- could use flash?
     end
 
     post '/hr/new' do #to show new profile

@@ -15,7 +15,7 @@ class EmployeesController < Sinatra::Base
         @badge_id = Staff.select do |employee|
             employee.badge_id == params[:badge_id]
         end
-
+            # try form.reset? of (form's) .class.reset method
         erb :hours_log
     end
 
@@ -36,10 +36,10 @@ class EmployeesController < Sinatra::Base
 
     get '/:badge_id' do #shows employee profile
         #add instance variables (@var)
-        erb :profile
+        erb :profile  #moved to employeehour controller
     end
 
-    get '/registrations' do
+    post '/registrations' do
         erb :signup
     end
 

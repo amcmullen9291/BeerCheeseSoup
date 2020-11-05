@@ -6,7 +6,7 @@
     <title> Time Card sheet </title>
   </head>
   <body>
-      <form action="/:badge_id/submit" method="get" class = "loggedHoursSheet">
+      <form action="/:badge_id/submit" method="post" class = "loggedHoursSheet">
         <main>
           <h2 id= "time card heading">Beer Cheese Soup Inc.</h2>
           <img src= "public\images/logo.jpg">
@@ -460,7 +460,9 @@
           </tr>
         </table>
         <aside>
+        <form action= '/:badge_id/timecard/reset' method= 'get'>
           <input type="reset" value="Reset Timecard">
+          </form>
           <form action="/:badge_id/save" method="patch">
               <button>Save/Update</button>
           </form>

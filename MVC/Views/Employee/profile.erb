@@ -1,2 +1,35 @@
-#leave out the salary and start date in the form
-#<Form>
+<html>
+  <head>
+    <link rel="stylesheet" href="welcome.css">
+    <title> Profile </title>
+  </head>
+  <body class= "profile-body>
+    <div id="gradient"></div>
+<div id="profile-card">
+<form>
+  <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/43604/profile/profile-512_1.jpg" /> <!--try to find a pic for the general profile card-->
+  <h2>
+    <input value= "#{'@named'}" type=text id="employee-named">
+ </h2>
+  <br>
+  <ul>
+  <li>
+  <input value= "#{'@phone'}" type=text id="employee-tel">
+  <input value= "#{'@email'}" type=text id="employee-email">
+  <input value= "#{'@dept'}" type=text id="department-name">
+</ul>
+<div>
+    <span class="left bottom">
+      <label id= "title_badge">
+      <b>Badge number:</b>
+      <input value= "#{'@badge_id'}" type=text id="employee-id"></label>
+    </span>
+  <span class="right bottom">
+  <label id= "title_dept">
+  <b>Department:</b>
+   <input value= "#{'@dept'}" type=text id="department-name"></label>
+  </span>
+  </form>
+</div>
+</body>
+</html>

@@ -5,6 +5,8 @@ class Employees < ActiveRecord::migration
             t.integer :badge_id
             t.string :first_name
             t.string :last_name
+            t.string :email_address
+            t.tel :telephone
             t.string :dept_id
         end
     end
