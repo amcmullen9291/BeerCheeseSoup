@@ -4,6 +4,19 @@ class EmployeesController < Sinatra::Base
         erb :home
     end
 
+    get '/:badge_id' do #employee id
+        sessions.clear
+        @email = Employee.Staff.select do |employee|
+            employee.email == params[:email]
+        arams[:first_name] + " " + params[:last_name]).join
+        @phone= params[:telephone]
+        @dept = params[:dept_id]
+        job = Department.Staff.find_by(:id == @dept)
+        department.name = params[:badge_id]
+
+        erb :profile
+    end
+
     post '/:badge_id/paidweeks' do #for submitting w/e cards
         @badge_id = Staff.select do |employee|
             employee.badge_id == params[:badge_id]
@@ -34,9 +47,7 @@ class EmployeesController < Sinatra::Base
         erb :hours_log
     end
 
-    get '/:badge_id' do #shows employee profile
-        #add instance variables (@var)
-        erb :profile  #moved to employeehour controller
+    patch '/hr/:badge_id/change ' do #to show amended profiles
     end
 
     post '/registrations' do
