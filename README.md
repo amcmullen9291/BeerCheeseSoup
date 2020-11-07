@@ -1,0 +1,2 @@
+BeerCheeseSoup
+Sinatra Portfolio project. A time card record keeping system. User can look at their own profile, record and edit hours as needed by saving partially completed time card, and submit their completed time cards to HR. Hr has the authority to edit salary, department information, and delete an employees record. Passwords are encrypted using the Bcrypt gem. Some of the images were created using the Bootstrap gem.
