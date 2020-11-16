@@ -24,7 +24,7 @@ class employeesHoursController < employeesController
     end
 
     patch '/BCS/:badge_id/timecard/reset' do
-        @badge_id = Staff.select |employee|
+        badge_id = Staff.select |employee|
             employee.badge_id == params[:badge_id]
         erb :hours_log
     end

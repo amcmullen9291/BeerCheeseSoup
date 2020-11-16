@@ -1,6 +1,5 @@
 require 'bundler'
-require 'sinatr-/activerecord'
-require 'sinatra-flash'
+require 'sinatra/activerecord'
 require 'require_all'
 
 ENV['SINATRA_ENV'] ||="development"
