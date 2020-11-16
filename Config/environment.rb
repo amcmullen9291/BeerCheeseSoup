@@ -1,24 +1,18 @@
 require 'bundler'
-require 'sinatra/activerecord'
-require 'sinatra/flash'
+require 'sinatr-/activerecord'
+require 'sinatra-flash'
 require 'require_all'
 
-require_all 'BeerCheeseSoup'
-Bundler.require
+ENV['SINATRA_ENV'] ||="development"
 
-configure do
-  set :public_folder, 'public'
-  set :views, 'mvc/views'
-  enable :sessions
-  set :session_secret, "overdraftprotection"
-end
+require 'bundler/setup'
+Bundler.require(:default, ENV['SINATRA_ENV'])
+
 
 ActiveRecord::Base.establish_connection(
   :adapter => "sqlite3",
-  :database => "db/employees.sqlite3"
+  :database => "db/#{ENV['SINATRA_ENV']}.sqlite"
 )
 
-use employeesHoursController
-use humanResourcesController
-run employeesController
+require_all '../BeerCheeseSoup'
 

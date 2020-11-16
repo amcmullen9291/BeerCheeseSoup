@@ -1,5 +1,12 @@
 class EmployeesController < Sinatra::Base
 
+    configure do
+        set :public_folder, 'public'
+        set :views, 'mvc/views'
+        enable :sessions
+        set :session_secret, "overdraftprotection"
+      end
+
     get '/' do
         erb :home
     end
