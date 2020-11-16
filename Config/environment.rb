@@ -1,4 +1,5 @@
 require 'bundler'
+require 'sinatra/activerecord'
 require 'sinatra/flash'
 require 'require_all'
 
@@ -14,7 +15,7 @@ end
 
 ActiveRecord::Base.establish_connection(
   :adapter => "sqlite3",
-  :database => "db/employees.sqlite"
+  :database => "db33/employees.sqlite3"
 )
 
 use employeesHoursController

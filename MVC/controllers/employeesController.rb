@@ -18,9 +18,8 @@ class EmployeesController < Sinatra::Base
     end
 
     post '/:badge_id/paidweeks' do #for submitting w/e cards
-        @badge_id = Staff.select do |employee|
+        @badge_id = Staff.select |employee|
             employee.badge_id == params[:badge_id]
-        end
         erb :paidweeks
     end
 
