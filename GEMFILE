@@ -1,12 +1,12 @@
 source 'https://rubygems.org'
 
-gem 'tux'
-gem 'sqlite3'
+# gem 'tux'
+# gem 'sqlite3'
 gem 'thin'
-gem 'shotgun'
+#gem 'shotgun'
 gem 'sinatra-activerecord', '~> 2.0', '>= 2.0.21'
 gem 'sinatra-flash', '~> 0.3.0'
-gem 'pry'
+#gem 'pry'
 gem 'require_all'
 gem 'sinatra', '~> 2.1'
 gem 'activerecord', '~> 6.0', '>= 6.0.3.4'
@@ -16,3 +16,11 @@ gem 'bcrypt'
 gem 'bootstrap', '~> 4.0'
 gem 'securerandom', '~> 0.1.0'
 gem 'bundler', '~> 2.1', '>= 2.1.4'
+
+
+group :development do
+    gem 'shotgun'
+    gem 'pry'
+    gem 'tux'
+    gem 'sqlite3'
+end

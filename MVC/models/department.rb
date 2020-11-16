@@ -2,7 +2,7 @@
 class Department < ActiveRecord::Base
     has_many :employees
 
-@@Staff=()
+@Staff=()
 
     def self.new(name)
         department = Department.new
