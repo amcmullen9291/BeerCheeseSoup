@@ -4,9 +4,9 @@ class EmployeesController < Sinatra::Base
         erb :home
     end
 
-    get '/:badge_id' do #employee id
+    get '/BCS/:badge_id' do #employee id
         sessions.clear
-        @email = Employee.Staff.select do |employee|
+        @email = Employee.Staff.select |employee|
             employee.email == params[:email]
         arams[:first_name] + " " + params[:last_name]).join
         @phone= params[:telephone]
@@ -17,24 +17,21 @@ class EmployeesController < Sinatra::Base
         erb :profile
     end
 
-    post '/:badge_id/paidweeks' do #for submitting w/e cards
+    post '/BCS/:badge_id/paidweeks' do #for submitting w/e cards
         @badge_id = Staff.select |employee|
             employee.badge_id == params[:badge_id]
         erb :paidweeks
     end
 
-    patch '/:badge_id/timecard/reset' do #use to reset entire w/e form
-        @badge_id = Staff.select do |employee|
+    patch '/BCS/:badge_id/timecard/reset' do #use to reset entire w/e form
+        @badge_id = Staff.select |employee|
             employee.badge_id == params[:badge_id]
-        end
-            # try form.reset? of (form's) .class.reset method
         erb :hours_log
     end
 
-    get '/:badge_id/timecard' do
-        @badge_id = Staff.select do |employee|
+    get '/BCS/:badge_id/timecard' do
+        @badge_id = Staff.select |employee|
             employee.badge_id == params[:badge_id]
-        end
         @hours1=(@out1-@in1)
         @hours2=(@out2-@in2)
         @hours3=(@out3-@in3)
@@ -49,7 +46,7 @@ class EmployeesController < Sinatra::Base
     patch '/hr/:badge_id/change ' do #to show amended profiles
     end
 
-    post '/registrations' do
+    post '/BCS/registrations' do
         erb :signup
     end
 

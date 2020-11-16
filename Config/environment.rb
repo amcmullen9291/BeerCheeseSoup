@@ -3,7 +3,7 @@ require 'sinatra/activerecord'
 require 'sinatra/flash'
 require 'require_all'
 
-require_all 'mvc'
+require_all 'BeerCheeseSoup'
 Bundler.require
 
 configure do
@@ -15,7 +15,7 @@ end
 
 ActiveRecord::Base.establish_connection(
   :adapter => "sqlite3",
-  :database => "db33/employees.sqlite3"
+  :database => "db/employees.sqlite3"
 )
 
 use employeesHoursController

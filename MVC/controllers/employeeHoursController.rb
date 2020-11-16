@@ -1,10 +1,10 @@
 class employeesHoursController < employeesController
 
 
-    post '' do
+    post '/' do
     end
 
-    get '/:badge_id' do #employee id
+    get '/BCS/:badge_id' do #employee id
         sessions.clear
         @email = Employee.Staff.select do |employee|
             employee.email == params[:email]
@@ -17,25 +17,21 @@ class employeesHoursController < employeesController
         erb :profile
     end
 
-    post '/:badge_id/paidweeks' do #for submitting w/e cards
-        @badge_id = Staff.select do |employee|
+    post '/BCS/:badge_id/paidweeks' do #for submitting w/e cards
+        @badge_id = Staff.select |employee|
             employee.badge_id == params[:badge_id]
-        end
         erb :paidweeks
     end
 
-    patch '/:badge_id/timecard/reset' do #use to reset entire w/e form
-        @badge_id = Staff.select do |employee|
+    patch '/BCS/:badge_id/timecard/reset' do
+        @badge_id = Staff.select |employee|
             employee.badge_id == params[:badge_id]
-        end
-            # try form.reset? of (form's) .class.reset method
         erb :hours_log
     end
 
-    get '/:badge_id/timecard' do #employee timecard
-        @badge_id = Staff.select do |employee|
+    get '/BCS/:badge_id/timecard' do #employee timecard
+        @badge_id = Staff.select |employee|
             employee.badge_id == params[:badge_id]
-        end
         @hours1=(@out1-@in1)
         @hours2=(@out2-@in2)
         @hours3=(@out3-@in3)
@@ -47,11 +43,10 @@ class employeesHoursController < employeesController
         erb :hours_log
     end
 
-    delete '/:badge_id/timecard/delete' do #modify... to deleting a single weeks records. change addy
-        @Staff.map |badge_id| do
-        record = Employee.Staff.find_by :badge_id
-        record.destroy
-        end
+    delete '/BCS/:badge_id/timecard/delete' do #modify... to deleting a single weeks records. change addy
+        @Staff.map |badge_id|
+        @record = Employee.Staff.find_by :badge_id
+        @record.destroy
         flash[:notice] = "Record destroyed."
     end
 
