@@ -1,6 +1,6 @@
 require_relative '../../config/environment'
 
-class HumanResourcesController < Sinatra::Base
+class HumanResourcesController < EmployeeController
 
 
     get '/hr' do #employee profiles

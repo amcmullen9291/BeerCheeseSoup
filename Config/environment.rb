@@ -10,5 +10,12 @@ ActiveRecord::Base.establish_connection(
 :adapter => “sqlite3”,
 :database => “db/#{ENV[‘SINATRA_ENV’]}.sqlite”
 
-require_all {'mvc'} )
+require_all {'mvc'}
+)
+require_all {'db'}
+require_all{'config'}
+require_all {'css'}
+require_all {'public'}
+
+
 

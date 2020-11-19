@@ -1,15 +1,38 @@
 require 'sinatra'
 require_relative '../../config/environment'
-class EmployeesController < Sinatra::Base
+
+class EmployeeController < Sinatra::Base
+
+    use Rack::Flash
 
     configure do
-        set :environment, :production
+    set :public_folder, ‘public’
+    set :views, ‘mvc/Views’
+    enable :sessions
+    set :session_secret, “overdraftproftection”
+    end
+
+    configure do
+        set :environment, :development
         enable :sessions
         set :session_secret, "overdraftprotection"
       end
 
     get '/' do
         erb :home
+    end
+
+    post ‘/signup’ do
+        @employee = Employee.new(params)
+        if @user.save
+            session[:badge_id] = employee.staff(0)
+            redirect erb :profile
+            #validations passed
+        else
+            flash [:message] = "You have entered incorrect log in information. Please try again."
+            erb :signup
+            #validations failed
+        end
     end
 
     get '/BCS/:badge_id' do #employee id
