@@ -2,7 +2,7 @@
 require_relative '../../config/environment'
 require 'securerandom'
 
-class Employee
+class Employee < ActiveRecord::Base
     belongs_to :department
     has_many :weeks
     has_secure_password

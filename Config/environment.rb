@@ -1,7 +1,7 @@
 require 'bundler'
 require 'require_all'
 
-require_all './mvc'
+require_all '../beercheesesoup'
 
 ENV[‘RACK_ENV’] ||= “development”
 ENV[‘SINATRA_ENV’] ||= “development”
