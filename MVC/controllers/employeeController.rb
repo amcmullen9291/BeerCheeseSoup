@@ -1,4 +1,4 @@
-require 'sinatra'
+require 'sinatra/base'
 require_relative '../../config/environment'
 
 class EmployeeController < Sinatra::Base

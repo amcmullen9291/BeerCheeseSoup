@@ -1,6 +1,11 @@
+require 'rubygems'
+require 'bundler'
 require_relative './config/environment'
 
-use employeesHoursController
+Bundler.require
+
+require 'mvc/controllers/employeeController.rb'
+use employeeHoursController
 use humanResourcesController
-run employeesController
+run employeeController
 
