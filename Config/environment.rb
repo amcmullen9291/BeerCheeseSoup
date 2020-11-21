@@ -1,7 +1,7 @@
 require 'bundler'
 require 'require_all'
 
-require_all 'mvc'
+require_all './mvc'
 
 ENV[‘RACK_ENV’] ||= “development”
 ENV[‘SINATRA_ENV’] ||= “development”
@@ -16,6 +16,9 @@ require_all {'mvc'}
 require_all {'db'}
 require_all{'config'}
 require_all {'css'}
+require_all {'mvc/controllers'}
+require_all {'mvc/models'}
+require_all {'mvc/views'}
 require_all {'public'}
 
 
