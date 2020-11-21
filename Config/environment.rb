@@ -1,7 +1,7 @@
 require 'bundler'
 require 'require_all'
 
-require_all './mvc'
+require_all 'mvc'
 
 ENV[‘SINATRA_ENV’] ||= “development”
 require ‘bundler/setup’
