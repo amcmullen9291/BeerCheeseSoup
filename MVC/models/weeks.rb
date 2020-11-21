@@ -1,4 +1,4 @@
-class Week :: Employee
+class Week::Employee
 belongs_to :employee
 
 end
