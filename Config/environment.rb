@@ -3,7 +3,7 @@ require 'require_all'
 
 require_all '../beercheesesoup'
 
-ENV[‘RACK_ENV’] ||= “development”
+# ENV[‘RACK_ENV’] ||= “development”
 ENV[‘SINATRA_ENV’] ||= “development”
 require ‘bundler/setup’
 Bundler.require(:default, ENV[‘SINATRA_ENV’])

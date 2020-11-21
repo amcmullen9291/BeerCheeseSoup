@@ -1,9 +1,9 @@
-##solely for rolecall and profile
-require_relative '../../config/environment'
+# ##solely for rolecall and profile
+# require_relative '../../config/environment'
 
-class Deparrment < ActiveRecord::Base
-    has_many :employees
+# class Department < ActiveRecord::Base
+#     has_many :employees
 
-    @Staff=()
+#     @Staff=()
 
-end
+# end

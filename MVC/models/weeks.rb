@@ -1,4 +1,4 @@
-class Weeks < ActiveRecord::Base
-    belongs_to :employee
+# class Weeks < ActiveRecord::Base
+#     belongs_to :employee
 
-end
+# end
