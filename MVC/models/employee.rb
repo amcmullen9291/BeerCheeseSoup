@@ -1,6 +1,5 @@
-##Be casreful with edit/update functions##
 #take data from humanResources table
-
+require_relative '../../config/environment'
 require 'securerandom'
 
 class Employee
