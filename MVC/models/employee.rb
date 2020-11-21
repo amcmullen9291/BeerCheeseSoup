@@ -3,7 +3,7 @@
 
 require 'securerandom'
 
-class Employee < ActiveRecord::Base
+class Employee
     belongs_to :department
     has_many :weeks
     has_secure_password

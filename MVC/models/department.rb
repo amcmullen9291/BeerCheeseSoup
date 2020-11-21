@@ -1,5 +1,5 @@
 ##solely for rolecall and profile
-class Department < ActiveRecord::Base
+class Department < Employee
     has_many :employees
 
 @Staff=()

@@ -5,7 +5,7 @@ class EmployeeController < Sinatra::Base
 
     configure do
     set :public_folder, public
-    set :views, mvc/views
+    set :views, views
     enable :sessions
     set :session_secret, 'overdraftproftection'
     end
