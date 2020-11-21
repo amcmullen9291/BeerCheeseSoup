@@ -1,12 +1,11 @@
 require 'sinatra'
 require_relative '../../config/environment'
-require 'sinatra-flash'
 
 class EmployeeController < Sinatra::Base
 
     configure do
-    set :public_folder, ‘public’
-    set :views, ‘mvc/views’
+    set :public_folder, public
+    set :views, mvc/views
     enable :sessions
     set :session_secret, 'overdraftproftection'
     end
