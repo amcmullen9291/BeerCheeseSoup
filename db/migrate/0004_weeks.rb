@@ -1,9 +1,9 @@
-class Weeks < ActiveRecord::migration
+class Weeks < ActiveRecord::Migration
     def change
         create_table :Weeks do |t|
             t.integer :badge_id
             t.string :last_name
-            t.datetime :w/e
+            t.datetime :weekending
             t.integer :monday
             t.integer :tuesday
             t.integer :wednesday
