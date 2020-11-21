@@ -1,4 +1,4 @@
-class Weeks < ActiveRecord::Migration
+class Weeks < ActiveRecord::Migration[6.0]
     def change
         create_table :Weeks do |t|
             t.integer :badge_id

@@ -1,5 +1,5 @@
 #if it works, only use the HR table. remove this!
-class Employees < ActiveRecord::Migration
+class Employees < ActiveRecord::Migration[6.0]
     def change
         create_table :Employees do |t|
             t.integer :badge_id
